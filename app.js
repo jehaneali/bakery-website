@@ -7,7 +7,7 @@ const port = 3000;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  fs.readFile("helloWorld.html", function(error, data) {
+  fs.readFile("homePage/homePage.html", function(error, data) {
     if(error) {
       res.writeHead(404)
       res.write('Error: File Not Found')
