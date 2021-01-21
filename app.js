@@ -9,13 +9,16 @@ const server = http.createServer((req, res) => {
   res.statusCode = 200;
   fs.readFile("homePage/homePage.html", function(error, data) {
     if(error) {
-      res.writeHead(404)
-      res.write('Error: File Not Found')
+      res.writeHead(404);
+      res.write('Error: File Not Found');
     }
     else {
-        res.write(data)
+        // console.log(typeof data);
+        console.log(data.toString());
+        // res.writeHead(200)
+        res.write(data);
     }    
-    res.end()
+    res.end();
   })
   // res.write(__dirname+"/helloWorld.html");
   // // res.setHeader('Content-Type', 'text/plain');

@@ -1,1 +1,0 @@
-document.write("<body>Hello World</body>");
